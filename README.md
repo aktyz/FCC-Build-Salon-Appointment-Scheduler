@@ -43,15 +43,11 @@ echo Zyta | read NAME
 echo Zyta | cat
 ```
 > **Difference between '<' and '|'**
->
->> ```sh
+> Below commands will produce the same output
+```sh
 sed 's/freecodecamp/f233C0d3C@mp/i' < name.txt
-```
->> ```sh
 cat name.txt | sed 's/freecodecamp/f233C0d3C@mp/i'
 ```
->>
->
 
 Another example of different use cases - translate.sh will cat the first argument:
 ```sh
