@@ -43,7 +43,7 @@ echo Zyta | read NAME
 echo Zyta | cat
 ```
 > **Difference between '<' and '|'**
-> Below commands will produce the same output
+> <br>Below commands will produce the same output
 ```sh
 sed 's/freecodecamp/f233C0d3C@mp/i' < name.txt
 cat name.txt | sed 's/freecodecamp/f233C0d3C@mp/i'
