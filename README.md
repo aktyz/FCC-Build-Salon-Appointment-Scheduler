@@ -108,19 +108,35 @@ echo freeCodeCamp | sed 's/freecodecamp/f233C0d3C@mp/i'
 echo freeCodeCampfreeCodeCamp | sed 's/freeCodeCamp/f233C0d3C@mp/'
 echo freeCodeCampfreeCodeCamp | sed 's/freeCodeCamp/f233C0d3C@mp/g'
 
-grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/[0-9]+/1/' -E
-grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/([0-9]+)/\1/' -E
-grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed 's/([0-9]+).*/\1/' -E
+grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/[0-9]+/1/'
+grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+)/\1/'
+grep -n 'meow[a-z]*' kitty_ipsum_1.txt | sed -E 's/([0-9]+).*/\1/'
 
 grep -n 'cat[a-z]*' kitty_ipsum_2.txt
-grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed 's/[0-9]+/1/' -E
-grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed 's/([0-9]+).*/1/' -E
-grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed 's/([0-9]+).*/\1/' -E #get line numbers that pattern appears on
+grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed -E 's/[0-9]+/1/'
+grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/1/'
+grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' #get line numbers that pattern appears on
 ```
 4. 'diff' to compare files line by line
 ```sh
 diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt
 ```
+
+## Learn bash and SQL by building a bike rental shop
+
+### New SQL commands
+Specifying default value of the column value:<br>
+```sql
+ALTER TABLE bikes ADD COLUMN available BOOLEAN NOT NULL DEFAULT true;
+```
+
+### Bash SubShell
+Pattern to open a sub-shell in bash:
+```sh
+<command> | <command> | $(<sub-shell command>) | <command>
+echo "$(echo '   M e   ' | sed -E 's/^ *| *$//g')."
+```
+
 
 
 
