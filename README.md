@@ -122,6 +122,10 @@ grep -n 'cat[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' #get line numb
 diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt
 ```
 
+5. 'tr/ - translate or delete characters
+
+
+
 ## Learn bash and SQL by building a bike rental shop
 
 ### New SQL commands
